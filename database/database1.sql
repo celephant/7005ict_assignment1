@@ -25,7 +25,11 @@ CREATE TABLE posts (
 
 -- insert initial data
 INSERT INTO users (id, name, email, password) VALUES (1, 'Ze Zeng', 'ze@example.com', 'password');
-INSERT INTO users (id, name, email, password) VALUES (2, 'TEST ONE', 'testone@example.com', 'testone');
+INSERT INTO users (id, name, email, password) VALUES (2, 'Test Two', 'testtwo@example.com', 'testtwo');
+INSERT INTO users (id, name, email, password) VALUES (3, 'Test Three', 'testthree@example.com', 'testthree');
+INSERT INTO users (id, name, email, password) VALUES (4, 'Test Four', 'testfour@example.com', 'testfour');
 
-INSERT INTO posts (id, title, author, message, date) VALUES (1, 'initial post', 'Ze Zeng', 'This is my 7005ict assingment1.', '31-1-2000');
-INSERT INTO posts (id, title, author, message, date) VALUES (2, 'test title', 'TEST ONE', 'My name is TEST ONE.', '12-12-1960');
+INSERT INTO posts (id, title, author, message, date) VALUES (1, 'initial post', 'Ze Zeng', 'This is my 7005ict assingment1.', '31-1-2023');
+INSERT INTO posts (id, title, author, message, date) VALUES (2, 'test title', 'Test Three', 'My name is TEST ONE.', '11-1-2000');
+INSERT INTO posts (id, title, author, message, date) VALUES (3, 'this is post title', 'Test Two', 'This is my 7005ict assingment1 , post title.', '31-5-2000');
+INSERT INTO posts (id, title, author, message, date) VALUES (4, 'this is link go to comments detail', 'Test Three', 'this is my second posts.', '12-12-2002');
