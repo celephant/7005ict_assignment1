@@ -25,7 +25,7 @@
     <h2>Posts</h2>
     <ul>
         @foreach($posts as $post)
-            <li> <a href="#">{{ $post->title }}</a> by {{ $post->author }} on {{ $post->date }} </li>
+            <li> <a href="/post/{{ $post->id }}">{{ $post->title }}</a> by {{ $post->author }} on {{ $post->date }} </li>
         @endforeach
     </ul>
 @endsection
