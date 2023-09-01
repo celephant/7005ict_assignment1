@@ -14,5 +14,6 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('home');
+    $posts = DB::select('SELECT * FROM posts ORDER BY date DESC');
+    return view('home', ['posts' => $posts]);
 });
