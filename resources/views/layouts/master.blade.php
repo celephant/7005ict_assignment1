@@ -13,7 +13,7 @@
 
     <nav>
         <ul>
-            <li><a href="/">Home</a></li>
+            <li><a href="http://s5316065.elf.ict.griffith.edu.au/7005ict/assingment/1/public/">Home</a></li>
             <li><a href="/create-post">Create Post</a></li>
             <li><a href="/example">example</a></li>
         </ul>

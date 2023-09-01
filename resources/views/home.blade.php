@@ -7,7 +7,7 @@
 
     <!-- Form to Create New Post -->
     <h2>Create a New Post</h2>
-    <form action="/create-post" method="post">
+    <form method="post">
         @csrf
         <label for="title">Title:</label>
         <input type="text" id="title" name="title" required><br>

@@ -17,3 +17,14 @@ Route::get('/', function () {
     $posts = DB::select('SELECT * FROM posts');
     return view('home', ['posts' => $posts]);
 });
+
+Route::post('/', function () {
+    $title = $_POST['title'];
+    $author = $_POST['author'];
+    $message = $_POST['message'];
+    $date = date('d/m/Y H:i:s');
+
+    DB::insert('INSERT INTO posts (title, author, message, date) VALUES (?, ?, ?, ?)', [$title, $author, $message, $date]);
+    return redirect('/');
+
+});
