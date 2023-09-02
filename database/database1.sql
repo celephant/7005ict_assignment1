@@ -14,13 +14,25 @@ CREATE TABLE users (
 
 -- Create posts table
 CREATE TABLE posts (
-    id INTEGER,
+    id INTEGER PRIMARY KEY,
+    user_id INTEGER,
     title TEXT NOT NULL,
     author TEXT NOT NULL,
     message TEXT NOT NULL,
     date NUMERIC NOT NULL,
-    PRIMARY KEY(id)
+    FOREIGN KEY (user_id) REFERENCES users(id)
 );
+
+-- create comments table
+CREATE TABLE comments (
+    id INTEGER PRIMARY KEY,
+    post_id INTEGER,
+    author TEXT NOT NULL,
+    message TEXT NOT NULL,
+    date TEXT NOT NULL,
+    FOREIGN KEY (post_id) REFERENCES posts(id)
+);
+
 
 
 -- insert initial data
