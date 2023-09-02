@@ -28,3 +28,8 @@ Route::post('/', function () {
     return redirect('/');
 
 });
+
+Route::get('/post/{id}', function ($id) {
+    $post = DB::select('SELECT * FROM posts WHERE id = ?', [$id]);
+    return view('postdetail', ['post' => $post[0]]);
+});
