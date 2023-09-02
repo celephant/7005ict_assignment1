@@ -31,5 +31,6 @@ Route::post('/', function () {
 
 Route::get('/post/{id}', function ($id) {
     $post = DB::select('SELECT * FROM posts WHERE id = ?', [$id]);
-    return view('postdetail', ['post' => $post[0]]);
+    $comments = DB::select('SELECT * FROM comments WHERE post_id = ? ORDER BY date DESC', [$id]);
+    return view('postdetail', ['post' => $post[0], 'comments' => $comments]);
 });

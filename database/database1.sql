@@ -23,15 +23,16 @@ CREATE TABLE posts (
     FOREIGN KEY (user_id) REFERENCES users(id)
 );
 
--- create comments table
+-- Create comments table
 CREATE TABLE comments (
     id INTEGER PRIMARY KEY,
     post_id INTEGER,
     author TEXT NOT NULL,
     message TEXT NOT NULL,
-    date TEXT NOT NULL,
+    date NUMERIC NOT NULL,
     FOREIGN KEY (post_id) REFERENCES posts(id)
 );
+
 
 
 

@@ -26,7 +26,7 @@
     <ul>
         @foreach($posts as $post)
             <li> <a href="http://s5316065.elf.ict.griffith.edu.au/7005ict/assingment/1/public/post/{{ $post -> id }}">{{ $post->title }}</a>
-            <br> by {{ $post->author }} on {{ $post->date }} </li>
+            <br> ---- {{ $post->author }} @ {{ $post->date }} </li>
         @endforeach
     </ul>
 @endsection
