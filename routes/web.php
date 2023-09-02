@@ -34,3 +34,13 @@ Route::get('/post/{id}', function ($id) {
     $comments = DB::select('SELECT * FROM comments WHERE post_id = ? ORDER BY date DESC', [$id]);
     return view('postdetail', ['post' => $post[0], 'comments' => $comments]);
 });
+
+Route::post('/post/{id}', function ($id) {
+    $author = $_POST['author'];
+    $message = $_POST['message'];
+    $date = date('d/m/Y H:i:s');
+
+    DB::insert('INSERT INTO comments (post_id, author, message, date) VALUES (?, ?, ?, ?)', [$id, $author, $message, $date]);
+
+    return redirect("/post/$id");
+});

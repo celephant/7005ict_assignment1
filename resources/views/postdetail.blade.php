@@ -14,8 +14,22 @@
     <h2>Comments:</h2>
     <ul>
         @foreach($comments as $comment)
-            <li> {{ $comments->message }}</a>
-            <br> ---- {{ $comments->author }} @ {{ $comments->date }} </li>
+            <li> {{ $comment->message }}</a>
+            <br> ---- {{ $comment->author }} @ {{ $comment->date }} </li>
         @endforeach
     </ul>
+
+    <!-- New Comment Form -->
+    <h2>Add a Comment</h2>
+    <form action="http://s5316065.elf.ict.griffith.edu.au/7005ict/assingment/1/public/post/{{ $post -> id }}" method="post">
+        @csrf
+        <label for="author">Author:</label>
+        <input type="text" id="author" name="author" required><br>
+
+        <label for="message">Message:</label>
+        <input id="message" name="message" required></input><br>
+
+        <input type="submit" value="Add Comment">
+    </form>
+
 @endsection
