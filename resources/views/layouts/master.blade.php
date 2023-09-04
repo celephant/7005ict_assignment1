@@ -12,7 +12,7 @@
 
     <nav>
         
-            <a href="http://s5316065.elf.ict.griffith.edu.au/7005ict/assingment/1/public/">Home</a>
+            <a href="{{url('/')}}">Home</a>
             <a href="/create-post">Create Post</a>
             <a href="/example">example</a>
         

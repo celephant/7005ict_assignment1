@@ -26,9 +26,17 @@
     <ul>
         @foreach($posts as $post)
             <li> 
-                <a href={{ url('/post/' . $post->id) }}">{{ $post->title }}</a> ---- {{ $post->author }} <br>
-                <a href="{{ url('/edit/' . $post->id) }}">Edit</a>
+                
+                <a href="{{ url('/post/' .$post->id) }}"> {{ $post->title }} </a> ---- {{ $post->author }} <br>
+                <a href="{{ url('/edit/'.$post->id) }}"> Edit </a>
+                <form action="{{ url('/post/' . $post->id) }}" method="post">
+                    @csrf
+                    <input type="submit" value="Delete">
+                </form>
+
             </li>
         @endforeach
     </ul>
+
+
 @endsection

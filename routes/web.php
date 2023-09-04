@@ -62,3 +62,11 @@ Route::post('/edit/{id}', function ($id) {
 
     return redirect("/post/$id");
 });
+
+
+Route::post('/delete/{id}', function ($id) {
+    DB::delete('DELETE FROM posts WHERE id = ?', [$id]);
+    DB::delete('DELETE FROM comments WHERE post_id = ?', [$id]);
+    return view('home',['posts' => $posts]);
+    
+});
