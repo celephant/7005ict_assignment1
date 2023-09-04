@@ -21,7 +21,7 @@
 
     <!-- New Comment Form -->
     <h2>Add a Comment</h2>
-    <form action="http://s5316065.elf.ict.griffith.edu.au/7005ict/assingment/1/public/post/{{ $post -> id }}" method="post">
+    <form action="{{ url('/post/' . $post->id) }}" method="post">
         @csrf
         <label for="author">Author:</label>
         <input type="text" id="author" name="author" required><br>
