@@ -3,7 +3,7 @@
 @section('title', $post->title)
 
 @section('content')
-    <h1>Post</h1>
+    <h2>Post</h2>
 
     <h3>{{ $post->title }}</h3>
 
