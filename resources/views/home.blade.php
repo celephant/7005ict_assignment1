@@ -7,7 +7,7 @@
 
     <!-- Form to Create New Post -->
     <h2>Create a New Post</h2>
-    <form method="post">
+    <form action="{{ url('/create-post') }}" method="post">
         @csrf
         <label for="title">Title:</label>
         <input type="text" id="title" name="title" required><br>
@@ -29,7 +29,7 @@
                 
                 <a href="{{ url('/post/' .$post->id) }}"> {{ $post->title }} </a> ---- {{ $post->author }} <br>
                 <a href="{{ url('/edit/'.$post->id) }}"> Edit </a>
-                <form action="{{ url('/post/' . $post->id) }}" method="post">
+                <form action="{{ url('/delete-post/' . $post->id) }}" method="post">
                     @csrf
                     <input type="submit" value="Delete">
                 </form>

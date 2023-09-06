@@ -18,7 +18,7 @@ Route::get('/', function () {
     return view('home', ['posts' => $posts]);
 });
 
-Route::post('/', function () {
+Route::post('/create-post', function () {
     $title = $_POST['title'];
     $author = $_POST['author'];
     $message = $_POST['message'];
@@ -64,9 +64,10 @@ Route::post('/edit/{id}', function ($id) {
 });
 
 
-Route::post('/delete/{id}', function ($id) {
-    DB::delete('DELETE FROM posts WHERE id = ?', [$id]);
+Route::post('/delete-post/{id}', function ($id) {
     DB::delete('DELETE FROM comments WHERE post_id = ?', [$id]);
-    return view('home',['posts' => $posts]);
+
+    DB::delete('DELETE FROM posts WHERE id = ?', [$id]);
+    return redirect('/');
     
 });
