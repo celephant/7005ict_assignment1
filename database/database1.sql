@@ -1,6 +1,7 @@
 -- drop table before create
 DROP TABLE IF EXISTS users;
 DROP TABLE IF EXISTS posts;
+DROP TABLE IF EXISTS comments;
 
 
 -- create user table
@@ -12,31 +13,38 @@ CREATE TABLE users (
     PRIMARY KEY(id)
 );
 
--- Create posts table
+-- create posts table
 CREATE TABLE posts (
-    id INTEGER PRIMARY KEY,
+    id INTEGER,
     user_id INTEGER,
     title TEXT NOT NULL,
     author TEXT NOT NULL,
     message TEXT NOT NULL,
-    date NUMERIC NOT NULL,
+    date DATETIME NOT NULL,
+    PRIMARY KEY(id),
     FOREIGN KEY (user_id) REFERENCES users(id)
 );
 
 -- Create comments table
 CREATE TABLE comments (
-    id INTEGER PRIMARY KEY,
+    id INTEGER,
     post_id INTEGER,
     author TEXT NOT NULL,
     message TEXT NOT NULL,
-    date NUMERIC NOT NULL,
+    date DATETIME NOT NULL,
+    PRIMARY KEY(id),
     FOREIGN KEY (post_id) REFERENCES posts(id)
 );
 
 
 
 
--- insert initial data
+
+
+
+
+
+-- Insert initial data
 INSERT INTO users (id, name, email, password) VALUES (1, 'Ze Zeng', 'ze@example.com', 'password');
 INSERT INTO users (id, name, email, password) VALUES (2, 'Test Two', 'testtwo@example.com', 'testtwo');
 INSERT INTO users (id, name, email, password) VALUES (3, 'Test Three', 'testthree@example.com', 'testthree');

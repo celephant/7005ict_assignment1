@@ -10,6 +10,8 @@
 <body>
     <h1>Welcome to Assignment1</h1>
 
+    <!-- Navigation Menu -->
+    <div id="nav">
     <nav>
         
             <a href="{{url('/')}}">Home</a>
@@ -17,6 +19,12 @@
             <a href="/example">example</a>
         
     </nav>
-    @yield('content')
+    </div>
+
+    <!-- Content Section -->
+    <div id="content">
+        @yield('content')
+    </div>
+
 </body>
 </html>
