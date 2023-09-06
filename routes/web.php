@@ -14,7 +14,14 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    $posts = DB::select('SELECT * FROM posts ORDER BY date DESC');
+    $posts = DB::select('
+    SELECT posts.*, COUNT(comments.id) as comments_count
+    FROM posts
+    LEFT JOIN comments ON posts.id = comments.post_id
+    GROUP BY posts.id
+    ORDER BY posts.date DESC
+');
+
     return view('home', ['posts' => $posts]);
 });
 

@@ -27,8 +27,9 @@
         @foreach($posts as $post)
             <li> 
                 
-                <a href="{{ url('/post/' .$post->id) }}"> {{ $post->title }} </a> ---- {{ $post->author }} <br>
-                <a href="{{ url('/edit/'.$post->id) }}"> Edit </a>
+                <a href="{{ url('/post/' .$post->id) }}"> {{ $post->title }} </a>-{{ $post->author }} 
+                <br> {{$post->comments_count}} Comments
+                <br> <a href="{{ url('/edit/'.$post->id) }}"> Edit </a>
                 <form action="{{ url('/delete-post/' . $post->id) }}" method="post">
                     @csrf
                     <input type="submit" value="Delete">
