@@ -31,6 +31,9 @@ Route::post('/create-post', function () {
     $message = $_POST['message'];
     $date = date('d/m/Y H:i:s');
 
+    // Store the author name in the session
+    Session::put('author', $author);
+
     DB::insert('INSERT INTO posts (title, author, message, date) VALUES (?, ?, ?, ?)', [$title, $author, $message, $date]);
     return redirect('/');
 
@@ -46,6 +49,9 @@ Route::post('/post/{id}', function ($id) {
     $author = $_POST['author'];
     $message = $_POST['message'];
     $date = date('d/m/Y H:i:s');
+
+    // Store the author name in the session
+    Session::put('author', $author);
 
     DB::insert('INSERT INTO comments (post_id, author, message, date) VALUES (?, ?, ?, ?)', [$id, $author, $message, $date]);
 
@@ -88,4 +94,21 @@ Route::get('/users/', function () {
 Route::get('/userposts/{author}', function ($author) {
     $posts = DB::select('SELECT * FROM posts WHERE author = ?', [$author]);
     return view('userposts', ['posts' => $posts, 'author' => $author]);
+});
+
+Route::post('/post/{id}/like', function ($id) {
+    $userName = $_POST['user_name'];
+
+    // Check if the user has already liked this post
+    $alreadyLiked = DB::select('SELECT * FROM likes WHERE post_id = ? AND user_name = ?', [$id, $userName]);
+
+    if (!$alreadyLiked) {
+        // Insert the like into the likes table
+        DB::insert('INSERT INTO likes (post_id, user_name) VALUES (?, ?)', [$id, $userName]);
+
+        // Update the like_count in the posts table
+        DB::update('UPDATE posts SET like_count = like_count + 1 WHERE id = ?', [$id]);
+    }
+
+    return redirect("/post/$id");
 });

@@ -21,6 +21,7 @@ CREATE TABLE posts (
     author TEXT NOT NULL,
     message TEXT NOT NULL,
     date DATETIME NOT NULL,
+    like_count INTEGER DEFAULT 0,
     PRIMARY KEY(id),
     FOREIGN KEY (user_id) REFERENCES users(id)
 );
@@ -36,6 +37,14 @@ CREATE TABLE comments (
     FOREIGN KEY (post_id) REFERENCES posts(id)
 );
 
+-- Create likes table
+CREATE TABLE likes (
+    id INTEGER,
+    post_id INTEGER,
+    user_name TEXT NOT NULL,
+    PRIMARY KEY(id),
+    FOREIGN KEY (post_id) REFERENCES posts(id)
+);
 
 
 

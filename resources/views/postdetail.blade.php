@@ -36,6 +36,14 @@
 
         <input type="submit" value="Add Comment">
     </form>
-</div>
 
+    <!-- Like Post Form -->
+    <h2>Like this Post</h2>
+    <form action="{{ url('/post/' . $post->id . '/like') }}" method="post">
+        @csrf
+        <label for="user_name">Your Name:</label>
+        <input type="text" id="user_name" name="user_name" required>
+        <input type="submit" value="Like">
+    </form>
+    <p>Total Likes: {{ $post->like_count }}</p>
 @endsection

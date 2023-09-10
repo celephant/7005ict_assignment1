@@ -7,6 +7,8 @@
     <div id="header">
         <h1>Home Page</h1>
     </div>
+<br>
+<br>
 
     <!-- Form to Create New Post -->
     <div id="create-post-section">
@@ -17,7 +19,7 @@
             <input type="text" id="title" name="title" required><br>
 
             <label for="author">Author:</label>
-            <input type="text" id="author" name="author" required><br>
+            <input type="text" id="author" name="author" value="{{ Session::get('author') }}" required><br>
 
             <label for="message">Message:</label>
             <input id="message" name="message" required><br>
@@ -26,6 +28,9 @@
         </form>
     </div>
 
+    <br>
+    <br>
+    <br>
 
     <!-- List of Posts -->
     <div id="list-posts-section">
@@ -34,8 +39,8 @@
             @foreach($posts as $post)
                 <li> 
                     
-                    <a href="{{ url('/post/' .$post->id) }}"> {{ $post->title }} </a>-{{ $post->author }} 
-                    <br> {{$post->comments_count}} Comments
+                    <a href="{{ url('/post/' .$post->id) }}"> {{ $post->title }} </a>-{{ $post->author }}@ {{ (new DateTime($post->date))->format('d/m/Y H:i:s') }}
+                    <br> --{{$post->like_count}} Likes {{$post->comments_count}} Comments
                     <br> <a href="{{ url('/edit/'.$post->id) }}"> Edit </a>
                     <form action="{{ url('/delete-post/' . $post->id) }}" method="post">
                         @csrf
