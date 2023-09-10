@@ -15,7 +15,7 @@
     <nav>
         
             <a href="{{url('/')}}">Home</a>
-            <a href="/create-post">Create Post</a>
+            <a href="{{url('users')}}">Users</a>
             <a href="/example">example</a>
         
     </nav>

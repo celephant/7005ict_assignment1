@@ -78,3 +78,14 @@ Route::post('/delete-post/{id}', function ($id) {
     return redirect('/');
     
 });
+
+
+Route::get('/users/', function () {
+    $users = DB::select('SELECT DISTINCT author FROM posts');
+    return view('users', ['users' => $users]);
+});
+
+Route::get('/userposts/{author}', function ($author) {
+    $posts = DB::select('SELECT * FROM posts WHERE author = ?', [$author]);
+    return view('userposts', ['posts' => $posts, 'author' => $author]);
+});
