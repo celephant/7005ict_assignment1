@@ -1,0 +1,173 @@
+commit faa3b79adccf667aa33fa46ac49a78cf605c9e0e
+Author: www-data <www-data@s5316065.elf.ict.griffith.edu.au>
+Date:   Mon Sep 11 00:13:52 2023 +1000
+
+    Add like and format
+
+commit 8f6317a50f2bd18964db9e9b2242b5005a3f0937
+Author: www-data <www-data@s5316065.elf.ict.griffith.edu.au>
+Date:   Sun Sep 10 16:27:21 2023 +1000
+
+    Add page for all users and each user
+
+commit 64c5cc0133c118f1ced86ca0987e662806ee879a
+Author: www-data <www-data@s5316065.elf.ict.griffith.edu.au>
+Date:   Thu Sep 7 09:36:42 2023 +1000
+
+    Add <div> for blade
+
+commit 026e4a11f1f147c38cf0bdc12dfba68275a4b6d5
+Author: www-data <www-data@s5316065.elf.ict.griffith.edu.au>
+Date:   Wed Sep 6 22:59:02 2023 +1000
+
+    add count commetns
+
+commit 848719034cdde6036d6a79c88de059ac0a750cfb
+Author: www-data <www-data@s5316065.elf.ict.griffith.edu.au>
+Date:   Wed Sep 6 16:07:27 2023 +1000
+
+    update loigc for delete funciton
+
+commit 0dda8ce398ef63929468cba997cd3a819553634a
+Author: www-data <www-data@s5316065.elf.ict.griffith.edu.au>
+Date:   Tue Sep 5 08:59:48 2023 +1000
+
+    Add delete funciton farmwork
+
+commit 09e9745f596b3b6358844788304dbadd51250b3a
+Author: www-data <www-data@s5316065.elf.ict.griffith.edu.au>
+Date:   Mon Sep 4 18:13:14 2023 +1000
+
+    change form action and href logic use url build in lavarel
+
+commit 6344f65a814aaccb03c4eb08c4301bfd8c9183d0
+Author: www-data <www-data@s5316065.elf.ict.griffith.edu.au>
+Date:   Mon Sep 4 17:10:49 2023 +1000
+
+    Added edit function
+
+commit 1770c9ffa7b1c59b446bde3d16628d090372fb3b
+Author: www-data <www-data@s5316065.elf.ict.griffith.edu.au>
+Date:   Sat Sep 2 21:37:40 2023 +1000
+
+    Added functionality to add new comments to posts
+
+commit 9d228accc50839838b4384af525b5b451017c2a5
+Author: www-data <www-data@s5316065.elf.ict.griffith.edu.au>
+Date:   Sat Sep 2 19:47:39 2023 +1000
+
+    change data type for date, updated postdeatil for comments
+
+commit c9020d7af0a3ea25d33ef1b348d3278e719f583a
+Author: www-data <www-data@s5316065.elf.ict.griffith.edu.au>
+Date:   Sat Sep 2 19:13:54 2023 +1000
+
+    Added SQL table for comments
+
+commit 188aaeee696039d9eacec1a650a7f20dcc20ae4b
+Author: www-data <www-data@s5316065.elf.ict.griffith.edu.au>
+Date:   Sat Sep 2 10:11:36 2023 +1000
+
+    Fixed routing issue for post details page
+
+commit 8c6a0f1998ed76f989e1a3278275026cfede5eda
+Author: www-data <www-data@s5316065.elf.ict.griffith.edu.au>
+Date:   Sat Sep 2 09:22:03 2023 +1000
+
+    Add link to detail blade and basic layout for
+
+commit a7572fdf0bcc9e5d043e4e93acd7fb1a40c1abd0
+Author: www-data <www-data@s5316065.elf.ict.griffith.edu.au>
+Date:   Sat Sep 2 09:00:43 2023 +1000
+
+    Add draft post deatil blade
+
+commit df7df4903b17fa3492ccc749222726fb2d1cf270
+Author: www-data <www-data@s5316065.elf.ict.griffith.edu.au>
+Date:   Sat Sep 2 08:59:14 2023 +1000
+
+    Add post time on home page
+
+commit 7cced324c6140dcfc96599426b1679253c135c41
+Author: www-data <www-data@s5316065.elf.ict.griffith.edu.au>
+Date:   Sat Sep 2 00:18:33 2023 +1000
+
+    post in chronological order
+
+commit 4fe903b4fd7c2ebadc58b687a0559a96329d9f3c
+Author: www-data <www-data@s5316065.elf.ict.griffith.edu.au>
+Date:   Sat Sep 2 00:18:14 2023 +1000
+
+    post in chronological order
+
+commit 70bd9acddb287717382ee15db58d536da50f327e
+Author: www-data <www-data@s5316065.elf.ict.griffith.edu.au>
+Date:   Sat Sep 2 00:10:44 2023 +1000
+
+    connect form to sqlite and update home blade
+
+commit c6e5857856ac36586cd3fc2d367af2263018052e
+Author: www-data <www-data@s5316065.elf.ict.griffith.edu.au>
+Date:   Fri Sep 1 22:47:06 2023 +1000
+
+    Added form for creating new posts on the home page
+
+commit 3a6c11d2a6a66fdb953b4e4f1922cd9ac964289b
+Author: www-data <www-data@s5316065.elf.ict.griffith.edu.au>
+Date:   Fri Sep 1 22:33:34 2023 +1000
+
+    Updated master layout with navigation menu
+
+commit a6a214231a7677592c890b5f153c26cfcd148d14
+Author: www-data <www-data@s5316065.elf.ict.griffith.edu.au>
+Date:   Fri Sep 1 20:11:23 2023 +1000
+
+    Add more initial data for test
+
+commit f4d87906d29ec27d1bb18844e19e2c8a8afd122e
+Author: www-data <www-data@s5316065.elf.ict.griffith.edu.au>
+Date:   Fri Sep 1 19:51:07 2023 +1000
+
+    Add foreach to display posts title in home and change route
+
+commit 44ed88ec5337d9cae7726f2aa8b597d611211b73
+Author: www-data <www-data@s5316065.elf.ict.griffith.edu.au>
+Date:   Fri Sep 1 11:27:35 2023 +1000
+
+    change database config
+
+commit b284c7864ad89da00f4a5be1dcbdd0b0b15268a6
+Author: www-data <www-data@s5316065.elf.ict.griffith.edu.au>
+Date:   Fri Sep 1 11:12:59 2023 +1000
+
+    Add initial data
+
+commit 9957c52a7d15df4c42edd34bbfab94db8d07cb12
+Author: www-data <www-data@s5316065.elf.ict.griffith.edu.au>
+Date:   Thu Aug 31 23:45:49 2023 +1000
+
+    create home page blade
+
+commit 629561b0f2866a96424d76f0e14d98ea7c67f6c1
+Author: www-data <www-data@s5316065.elf.ict.griffith.edu.au>
+Date:   Thu Aug 31 22:48:26 2023 +1000
+
+    Created master layout with basic HTML structure and Blade placeholders
+
+commit 404e93822aa78c24a3bfdfd05fae6ca0748e53db
+Author: www-data <www-data@s5316065.elf.ict.griffith.edu.au>
+Date:   Thu Aug 31 21:20:51 2023 +1000
+
+    database for users and posts
+
+commit 3dcc5dec3702150e11a95f254af21961b71ad744
+Author: www-data <www-data@s5316065.elf.ict.griffith.edu.au>
+Date:   Thu Aug 31 20:52:44 2023 +1000
+
+    create data.sqlite and change .env and create database1.sql
+
+commit f957f62fffcec1b099fe70b59a82979f90191dbe
+Author: www-data <www-data@s5316065.elf.ict.griffith.edu.au>
+Date:   Thu Aug 31 20:26:14 2023 +1000
+
+    start assignment1

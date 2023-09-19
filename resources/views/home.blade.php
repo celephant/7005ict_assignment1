@@ -39,7 +39,7 @@
             @foreach($posts as $post)
                 <li> 
                     
-                    <a href="{{ url('/post/' .$post->id) }}"> {{ $post->title }} </a>-{{ $post->author }}@ {{ (new DateTime($post->date))->format('d/m/Y H:i:s') }}
+                    <a href="{{ url('/post/' .$post->id) }}"> {{ $post->title }} </a>-{{ $post->author }}@ {{$post->date}}
                     <br> --{{$post->like_count}} Likes {{$post->comments_count}} Comments
                     <br> <a href="{{ url('/edit/'.$post->id) }}"> Edit </a>
                     <form action="{{ url('/delete-post/' . $post->id) }}" method="post">
